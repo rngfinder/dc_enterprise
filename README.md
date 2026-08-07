@@ -1,4 +1,4 @@
-````markdown
+
 # VXLAN MP-BGP EVPN Layer 2 Data Center Lab
 
 A production-style **VXLAN MP-BGP EVPN Layer 2** data center fabric built with **Arista cEOS** and **Containerlab**.
@@ -15,18 +15,8 @@ The project demonstrates how to build a modern Spine-Leaf architecture using an 
 
 ### Architecture
 
-```
-        +-----------+      +-----------+
-        |  SPINE1   |------|  SPINE2   |
-        +-----------+      +-----------+
-           /   |   \          /   |   \
-          /    |    \        /    |    \
-     +------+ +------+ +------+ +------+
-     |LEAF1| |LEAF2| |LEAF3| |LEAF4|
-     +------+ +------+ +------+ +------+
-        |        |        |        |
-      Server1  Server2  Server3  Server4
-```
+
+
 
 ---
 
