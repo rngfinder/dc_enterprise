@@ -1,0 +1,15 @@
+VNI			10010
+		
+VLAN			10
+		
+Multicast group		239.1.1.10
+Group list		224.0.0.0/4
+pim range		232.0.0.0/8
+		
+OSPF		
+Area			0.0.0.0
+Connections		Point-to-point
+		
+BGP		
+AS			65000
+	

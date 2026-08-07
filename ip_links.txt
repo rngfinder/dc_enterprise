@@ -1,0 +1,48 @@
+Link		Subnet		Device		Interface	IP	
+SPINE1<>LEAF1	10.1.1.0/31	SPINE1		Eth1		10.1.1.0     /31
+				LEAF1		Eth1		10.1.1.1    /31
+SPINE1<>LEAF2	10.1.2.0/31	SPINE1		Eth2		10.1.2.0    /31
+				LEAF2		Eth1		10.1.2.1    /31
+SPINE1<>LEAF3	10.1.3.0/31	SPINE1		Eth3		10.1.3.0    /31
+				LEAF3		Eth1		10.1.3.1    /31
+SPINE1<>LEAF4	10.1.4.0/31	SPINE1		Eth4		10.1.4.0    /31 
+				LEAF4		Eth1		10.1.4.1    /31
+SPINE1<>LEAF5	10.1.5.0/31	SPINE1		Eth5		10.1.5.0    /31
+				LEAF5		Eth1		10.1.5.1    /31
+SPINE2<>LEAF1	10.2.1.0/31	SPINE2		Eth1		10.2.1.0    /31
+				LEAF1		Eth2		10.2.1.1    /31
+SPINE2<>LEAF2	10.2.2.0/31	SPINE2		Eth1		10.2.2.0    /31
+				LEAF2		Eth2		10.2.2.1    /31
+SPINE2<>LEAF3	10.2.3.0/31	SPINE2		Eth1		10.2.3.0    /31
+				LEAF3		Eth2		10.2.3.1    /31
+SPINE2<>LEAF4	10.2.4.0/31	SPINE2		Eth1		10.2.4.0    /31
+					
+Loopbacks	10.0.0.1/32	SPINE1		Loopback0	10.0.0.1     /32
+		10.0.0.2/32	SPINE2		Loopback0	10.0.0.2     /32
+		10.0.0.11/32	LEAF1		Loopback0	10.0.0.11    /32
+		10.0.0.12/32	LEAF2		Loopback0	10.0.0.12    /32
+		10.0.0.13/32	LEAF3		Loopback0	10.0.0.13    /32
+		10.0.0.14/32	LEAF4		Loopback0	10.0.0.14    /32
+		10.0.1.11/32	LEAF1		Loopback1	10.0.1.11    /32
+		10.0.1.12/32	LEAF2		Loopback1	10.0.1.12    /32
+		10.0.1.13/32	LEAF3		Loopback1	10.0.1.13    /32
+		10.0.1.14/32	LEAF4		Loopback1	10.0.1.14    /32
+		10.12.12.12/32	SPINE1		Loopback12	10.12.12.12  /32
+		10.12.12.12/32	SPINE2		Loopback12	10.12.12.12  /32
+						
+Mgmt.		172.20.20.0/24	SPINE1		Management0	172.20.20.2  /24
+				SPINE2		Management0	172.20.20.3  /24
+				LEAF1		Management0	172.20.20.4  /24
+				LEAF2		Management0	172.20.20.5  /24
+				LEAF3		Management0	172.20.20.6  /24
+				LEAF4		Management0	172.20.20.7  /24
+				S1		Management0	172.20.20.11 /24
+				S2		Management0	172.20.20.12 /24
+				S3		Management0	172.20.20.13 /24
+				S4		Management0	172.20.20.14 /24
+					
+S1		192.168.0.0/24					192.168.0.1  /24
+S2								192.168.0.2  /24
+S3								192.168.0.3  /24
+S4								192.168.0.4  /24
+

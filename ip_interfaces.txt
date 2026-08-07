@@ -1,0 +1,56 @@
+SPINE1	Eth1		10.1.1.0	/31
+	Eth2		10.1.2.0	/31
+	Eth3		10.1.3.0	/31
+	Eth4		10.1.4.0	/31
+	Loopback0	10.0.0.1	/32
+	Loopback12	10.12.12.12	/32
+	Management0	172.20.20.2	/24
+			
+SPINE2	Eth1		10.2.1.0	/31
+	Eth2		10.2.2.0	/31
+	Eth3		10.2.3.0	/31
+	Eth4		10.2.4.0	/31
+	Loopback0	10.0.0.2	/32
+	Loopback12	10.12.12.12	/32
+	Management0	172.20.20.3	/24
+			
+LEAF1	Eth1		10.1.1.1	/31
+	Eth2		10.2.1.1	/31
+	Eth3		VLAN		10
+	Loopback0	10.0.0.11	/32
+	Loopback1	10.0.1.11	/32
+	Management0	172.20.20.4	/24
+			
+LEAF2	Eth1		10.1.2.1	/31
+	Eth2		10.2.2.1	/31
+	Eth3		VLAN		10
+	Loopback0	10.0.0.12	/32
+	Loopback1	10.0.1.12	/32
+	Management0	172.20.20.5	/24
+			
+LEAF3	Eth1		10.1.3.1	/31
+	Eth2		10.2.3.1	/31
+	Eth3		VLAN		10
+	Loopback0	10.0.0.13	/32
+	Loopback1	10.0.1.13	/32
+	Management0	172.20.20.6	/24
+	Eth3		VLAN		10
+	
+LEAF4	Eth1		10.1.4.1	/31
+	Eth2		10.2.4.1	/31
+	Loopback0	10.0.0.14	/32
+	Loopback1	10.0.1.14	/32
+	Management0	172.20.20.7	/24
+			
+S1	IP address	192.168.0.1	/24
+	Management0	172.20.20.11	/24
+			
+S2	IP address	192.168.0.2	/24
+	Management0	172.20.20.12	/24
+			
+S3	IP address	192.168.0.3	/24
+	Management0	172.20.20.13	/24
+			
+S4	IP address	192.168.0.4	/24
+	Management0	172.20.20.14	/24
+
