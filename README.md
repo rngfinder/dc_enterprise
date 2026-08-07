@@ -15,7 +15,7 @@ The project demonstrates how to build a modern Spine-Leaf architecture using an 
 
 ### Architecture
 
-![Project Screenshot](Screenshot from 2026-08-07 14-45-14.png)
+![Project Screenshot](topology.png)
 
 ---
 
@@ -94,53 +94,6 @@ This lab demonstrates:
 
 ---
 
-## Repository Structure
-
-```
-.
-├── configs/
-│   ├── SPINE1.cfg
-│   ├── SPINE2.cfg
-│   ├── LEAF1.cfg
-│   ├── LEAF2.cfg
-│   ├── LEAF3.cfg
-│   └── LEAF4.cfg
-│
-├── topology/
-│   └── topology.clab.yml
-│
-├── diagrams/
-│
-├── images/
-│
-└── README.md
-```
-
----
-
-## Deployment
-
-Clone the repository:
-
-```bash
-git clone https://github.com/<your_username>/<repository>.git
-cd <repository>
-```
-
-Deploy the lab:
-
-```bash
-containerlab deploy -t topology/topology.clab.yml
-```
-
-Verify the lab:
-
-```bash
-docker ps
-```
-
----
-
 ## Validation
 
 Example verification commands:
@@ -183,31 +136,3 @@ show vxlan flood vtep
 - CI/CD integration
 
 ---
-
-## Resources
-
-- Arista EOS
-- Containerlab
-- EVPN RFC 7432
-- VXLAN RFC 7348
-
----
-
-## Author
-
-**Vladimir Kovalev**
-
-Network Engineer
-
-GitHub:
-https://github.com/<your_username>
-
-LinkedIn:
-https://linkedin.com/in/v-kovalev
-
----
-
-## License
-
-This project is available under the MIT License.
-````
