@@ -1,20 +1,20 @@
 Device	Interface  <> 	Device	Interface
 				
-SPINE1	Eth1		LEAF1	Eth1
-	Eth2		LEAF2	Eth1
-	Eth3		LEAF3	Eth1
-	Eth4		LEAF4	Eth1
+SPINE1	Eth1			LEAF1	Eth1
+		Eth2			LEAF2	Eth1
+		Eth3			LEAF3	Eth1
+		Eth4			LEAF4	Eth1
 				
-SPINE2	Eth1		LEAF1	Eth2
-	Eth2		LEAF2	Eth2
-	Eth3		LEAF3	Eth2
-	Eth4		LEAF4	Eth2
+SPINE2	Eth1			LEAF1	Eth2
+		Eth2			LEAF2	Eth2
+		Eth3			LEAF3	Eth2
+		Eth4			LEAF4	Eth2
 				
-S1	Eth1		LEAF1	Eth3
+S1		Eth1			LEAF1	Eth3
 				
-S2	Eth1		LEAF2	Eth3
+S2		Eth1			LEAF2	Eth3
 				
-S3	Eth1		LEAF3	Eth3
+S3		Eth1			LEAF3	Eth3
 				
-S4	Eth1		LEAF4	Eth3
+S4		Eth1			LEAF4	Eth3
 
