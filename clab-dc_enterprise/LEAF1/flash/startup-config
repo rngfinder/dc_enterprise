@@ -1,0 +1,109 @@
+! Startup-config last modified at Fri Aug  7 12:35:41 2026 by root
+! device: LEAF1 (cEOSLab, EOS-4.36.0F-47083774.4360F (engineering build))
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$DbwUeyeP5I74TORJ$8FMTB6AI4JPGRpTvlHJe1ofLReOO0CQqclW49ey0frJt4zh9hpSeKLayPvXztmaheTWM37M8si5dAvwNBpkvw/
+!
+management api http-commands
+   no shutdown
+!
+no service interface inactive port-id allocation disabled
+!
+service routing protocols model multi-agent
+!
+hostname LEAF1
+!
+spanning-tree mode mstp
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+vlan 10
+   name Server_VLAN_10
+!
+management api gnmi
+   transport grpc default
+!
+management api netconf
+   transport ssh default
+!
+interface Ethernet1
+   description p2p_to_SPINE1
+   mtu 9214
+   no switchport
+   ip address 10.1.1.1/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
+   pim ipv4 sparse-mode
+!
+interface Ethernet2
+   description p2p_to_SPINE2
+   mtu 9214
+   no switchport
+   ip address 10.2.1.1/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
+   pim ipv4 sparse-mode
+!
+interface Ethernet3
+   description to_SERVER_VLAN_10
+   switchport access vlan 10
+!
+interface Loopback0
+   description Router-ID / BGP Peering
+   ip address 10.0.0.11/32
+   ip ospf area 0.0.0.0
+!
+interface Loopback1
+   description VTEP_Source_IP
+   ip address 10.0.1.11/32
+   ip ospf area 0.0.0.0
+!
+interface Management0
+   ip address 172.20.20.4/24
+   ipv6 address 3fff:172:20:20::8/64
+!
+interface Vxlan1
+   vxlan source-interface Loopback1
+   vxlan udp-port 4789
+   vxlan vlan 10 vni 10010
+   vxlan vlan 10 flood group 239.1.1.10
+!
+ip routing
+!
+ip route 0.0.0.0/0 172.20.20.1
+!
+ipv6 route ::/0 3fff:172:20:20::1
+!
+router bgp 65000
+   router-id 10.0.0.11
+   neighbor SPINE_PEERS peer group
+   neighbor SPINE_PEERS remote-as 65000
+   neighbor SPINE_PEERS update-source Loopback0
+   neighbor SPINE_PEERS send-community extended
+   neighbor 10.0.0.1 peer group SPINE_PEERS
+   neighbor 10.0.0.2 peer group SPINE_PEERS
+   !
+   vlan 10
+      rd 10.0.0.11:10010
+      route-target both 10010:10010
+      redistribute learned
+   !
+   address-family evpn
+      neighbor SPINE_PEERS activate
+!
+router multicast
+   ipv4
+      routing
+!
+router ospf 1
+   router-id 10.0.0.11
+   max-lsa 12000
+!
+router pim sparse-mode
+   ipv4
+      rp address 10.12.12.12
+!
+end

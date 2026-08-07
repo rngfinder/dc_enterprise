@@ -1,0 +1,593 @@
+{
+  "name": "dc_enterprise",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-079089aa65ca",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDF5VpQLD4dc8EZFvhOl9lcbABf8GzU9GX35u+bXsTXJiLbKD6jWybEVSs1034vhYaD7M2geRCGjjdj4kiFn7wH+gshP6E5almIEMbsDpd3yJ5tx451H7N8q7aUtQLnsob6P6g3Vv6pGwuTLWDKqWJmQBsyE3t/qpfw/DTohpH2xCL6Eg5tJjL4S5p8YWwQbKqwiY3vs2/GyWEMjhIrXzVP/+qNxgQb9JFKnI3nkbd8kpTxOj8jUM+n+DYktckmrukrk49CjQO0+F5az1XQrE02UPrRd2sp18M0PJNtElPeWdZ7kOp6Wc7Cl0U/dioaUoJV2GReBhWQW8ncS5TM+k6HWulxP9wY4P0QzkJFv3qVFPknL2keEcW4iVs8C0SpEfixdsrPIsegMQd+0o9/mzJ0aq1rPKUfFV4eDt3Sfr19EkuUHhtqi5VuG1XqIMBdPHJfnJ7RJpg9rEMATOiU8VYap6VTjmIX/uDbxRxKN4KeK7ViuO7QJTN4dJZDHuAX4qO1kKwyQKKbkNmZyhJzk8Uep8PDshXgkeIIh8nue5+dBspahZYWR0MhljSTFa2u/4D/XXPlhKO131++Xto1Nyg5AD+7y+8KsW5aeeN526Q2riPrzx5tvutoIsEI2Zc6qhE9RX7owNIpA3Soz/6uMkO/B20+D/aQ4uj+HzUFVLTpgw==","ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILE34H2XjOm5FMHgR4bejk1W9SDRcAf49m/UPUdr1Ak9","ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMo8+I5wmdlnZ1fx39JXW/L7RJ4OaIjXYT8cHiU9EE33"],
+  "nodes": {
+    "LEAF1": {
+      "index": "0",
+      "shortname": "LEAF1",
+      "longname": "LEAF1",
+      "fqdn": "LEAF1.dc_enterprise.io",
+      "group": "",
+      "labdir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/LEAF1",
+      "kind": "arista_ceos",
+      "image": "ceos:4.36.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:ee:42:e0",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "07889b7",
+        "clab-mgmt-net-bridge": "br-079089aa65ca",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/LEAF1",
+        "clab-node-longname": "LEAF1",
+        "clab-node-name": "LEAF1",
+        "clab-node-type": "",
+        "clab-owner": "sysadmin",
+        "clab-topo-file": "/home/sysadmin/dc_enterprise/dc_enterprise.clab.yml",
+        "containerlab": "dc_enterprise"
+      },
+      "port-bindings": [
+      ]
+    },
+    "LEAF2": {
+      "index": "1",
+      "shortname": "LEAF2",
+      "longname": "LEAF2",
+      "fqdn": "LEAF2.dc_enterprise.io",
+      "group": "",
+      "labdir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/LEAF2",
+      "kind": "arista_ceos",
+      "image": "ceos:4.36.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:16:19:9e",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "07889b7",
+        "clab-mgmt-net-bridge": "br-079089aa65ca",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/LEAF2",
+        "clab-node-longname": "LEAF2",
+        "clab-node-name": "LEAF2",
+        "clab-node-type": "",
+        "clab-owner": "sysadmin",
+        "clab-topo-file": "/home/sysadmin/dc_enterprise/dc_enterprise.clab.yml",
+        "containerlab": "dc_enterprise"
+      },
+      "port-bindings": [
+      ]
+    },
+    "LEAF3": {
+      "index": "2",
+      "shortname": "LEAF3",
+      "longname": "LEAF3",
+      "fqdn": "LEAF3.dc_enterprise.io",
+      "group": "",
+      "labdir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/LEAF3",
+      "kind": "arista_ceos",
+      "image": "ceos:4.36.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:8f:79:d0",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "07889b7",
+        "clab-mgmt-net-bridge": "br-079089aa65ca",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/LEAF3",
+        "clab-node-longname": "LEAF3",
+        "clab-node-name": "LEAF3",
+        "clab-node-type": "",
+        "clab-owner": "sysadmin",
+        "clab-topo-file": "/home/sysadmin/dc_enterprise/dc_enterprise.clab.yml",
+        "containerlab": "dc_enterprise"
+      },
+      "port-bindings": [
+      ]
+    },
+    "LEAF4": {
+      "index": "3",
+      "shortname": "LEAF4",
+      "longname": "LEAF4",
+      "fqdn": "LEAF4.dc_enterprise.io",
+      "group": "",
+      "labdir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/LEAF4",
+      "kind": "arista_ceos",
+      "image": "ceos:4.36.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:85:b5:65",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "07889b7",
+        "clab-mgmt-net-bridge": "br-079089aa65ca",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/LEAF4",
+        "clab-node-longname": "LEAF4",
+        "clab-node-name": "LEAF4",
+        "clab-node-type": "",
+        "clab-owner": "sysadmin",
+        "clab-topo-file": "/home/sysadmin/dc_enterprise/dc_enterprise.clab.yml",
+        "containerlab": "dc_enterprise"
+      },
+      "port-bindings": [
+      ]
+    },
+    "S1": {
+      "index": "4",
+      "shortname": "S1",
+      "longname": "S1",
+      "fqdn": "S1.dc_enterprise.io",
+      "group": "",
+      "labdir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/S1",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "07889b7",
+        "clab-mgmt-net-bridge": "br-079089aa65ca",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/S1",
+        "clab-node-longname": "S1",
+        "clab-node-name": "S1",
+        "clab-node-type": "",
+        "clab-owner": "sysadmin",
+        "clab-topo-file": "/home/sysadmin/dc_enterprise/dc_enterprise.clab.yml",
+        "containerlab": "dc_enterprise"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "S2": {
+      "index": "5",
+      "shortname": "S2",
+      "longname": "S2",
+      "fqdn": "S2.dc_enterprise.io",
+      "group": "",
+      "labdir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/S2",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "07889b7",
+        "clab-mgmt-net-bridge": "br-079089aa65ca",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/S2",
+        "clab-node-longname": "S2",
+        "clab-node-name": "S2",
+        "clab-node-type": "",
+        "clab-owner": "sysadmin",
+        "clab-topo-file": "/home/sysadmin/dc_enterprise/dc_enterprise.clab.yml",
+        "containerlab": "dc_enterprise"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "S3": {
+      "index": "6",
+      "shortname": "S3",
+      "longname": "S3",
+      "fqdn": "S3.dc_enterprise.io",
+      "group": "",
+      "labdir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/S3",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.13",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "07889b7",
+        "clab-mgmt-net-bridge": "br-079089aa65ca",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/S3",
+        "clab-node-longname": "S3",
+        "clab-node-name": "S3",
+        "clab-node-type": "",
+        "clab-owner": "sysadmin",
+        "clab-topo-file": "/home/sysadmin/dc_enterprise/dc_enterprise.clab.yml",
+        "containerlab": "dc_enterprise"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "S4": {
+      "index": "7",
+      "shortname": "S4",
+      "longname": "S4",
+      "fqdn": "S4.dc_enterprise.io",
+      "group": "",
+      "labdir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/S4",
+      "kind": "linux",
+      "image": "ghcr.io/hellt/network-multitool:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.14",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "07889b7",
+        "clab-mgmt-net-bridge": "br-079089aa65ca",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/S4",
+        "clab-node-longname": "S4",
+        "clab-node-name": "S4",
+        "clab-node-type": "",
+        "clab-owner": "sysadmin",
+        "clab-topo-file": "/home/sysadmin/dc_enterprise/dc_enterprise.clab.yml",
+        "containerlab": "dc_enterprise"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "SPINE1": {
+      "index": "8",
+      "shortname": "SPINE1",
+      "longname": "SPINE1",
+      "fqdn": "SPINE1.dc_enterprise.io",
+      "group": "",
+      "labdir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/SPINE1",
+      "kind": "arista_ceos",
+      "image": "ceos:4.36.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:93:bd:3f",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "07889b7",
+        "clab-mgmt-net-bridge": "br-079089aa65ca",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/SPINE1",
+        "clab-node-longname": "SPINE1",
+        "clab-node-name": "SPINE1",
+        "clab-node-type": "",
+        "clab-owner": "sysadmin",
+        "clab-topo-file": "/home/sysadmin/dc_enterprise/dc_enterprise.clab.yml",
+        "containerlab": "dc_enterprise"
+      },
+      "port-bindings": [
+      ]
+    },
+    "SPINE2": {
+      "index": "9",
+      "shortname": "SPINE2",
+      "longname": "SPINE2",
+      "fqdn": "SPINE2.dc_enterprise.io",
+      "group": "",
+      "labdir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/SPINE2",
+      "kind": "arista_ceos",
+      "image": "ceos:4.36.0F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "00:1c:73:cc:af:97",
+      "labels": {
+        "clab-git-branch": "main",
+        "clab-git-hash": "07889b7",
+        "clab-mgmt-net-bridge": "br-079089aa65ca",
+        "clab-node-group": "",
+        "clab-node-kind": "arista_ceos",
+        "clab-node-lab-dir": "/home/sysadmin/dc_enterprise/clab-dc_enterprise/SPINE2",
+        "clab-node-longname": "SPINE2",
+        "clab-node-name": "SPINE2",
+        "clab-node-type": "",
+        "clab-owner": "sysadmin",
+        "clab-topo-file": "/home/sysadmin/dc_enterprise/dc_enterprise.clab.yml",
+        "containerlab": "dc_enterprise"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "SPINE1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:8e:ca:d1",
+          "peer": "z"
+        },
+        "z": {
+          "node": "LEAF1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:f0:29:df",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "SPINE1",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:bf:1f:d1",
+          "peer": "z"
+        },
+        "z": {
+          "node": "LEAF2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:4b:89:54",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "SPINE1",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:70:f2:17",
+          "peer": "z"
+        },
+        "z": {
+          "node": "LEAF3",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:81:b5:7d",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "SPINE1",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:73:e4:87",
+          "peer": "z"
+        },
+        "z": {
+          "node": "LEAF4",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:4d:24:c7",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "SPINE2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:64:8e:e5",
+          "peer": "z"
+        },
+        "z": {
+          "node": "LEAF1",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:39:46:53",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "SPINE2",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:34:45:6a",
+          "peer": "z"
+        },
+        "z": {
+          "node": "LEAF2",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:0c:c8:26",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "SPINE2",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:17:06:40",
+          "peer": "z"
+        },
+        "z": {
+          "node": "LEAF3",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:f7:2c:e9",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "SPINE2",
+          "interface": "eth4",
+          "mac": "aa:c1:ab:41:5b:9f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "LEAF4",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:f0:2a:59",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "S1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:3b:0c:61",
+          "peer": "z"
+        },
+        "z": {
+          "node": "LEAF1",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:67:85:b0",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "S2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:a3:a7:9f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "LEAF2",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:76:f2:da",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "S3",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:00:71:9b",
+          "peer": "z"
+        },
+        "z": {
+          "node": "LEAF3",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:37:9a:5f",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "S4",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:f1:54:16",
+          "peer": "z"
+        },
+        "z": {
+          "node": "LEAF4",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:42:cf:d1",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

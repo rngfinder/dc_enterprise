@@ -1,0 +1,82 @@
+{
+  "freeTextAnnotations": [],
+  "freeShapeAnnotations": [],
+  "trafficRateAnnotations": [],
+  "groupStyleAnnotations": [],
+  "networkNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "SPINE1",
+      "position": {
+        "x": 180,
+        "y": 160
+      }
+    },
+    {
+      "id": "SPINE2",
+      "position": {
+        "x": 480,
+        "y": 160
+      }
+    },
+    {
+      "id": "LEAF1",
+      "position": {
+        "x": 80,
+        "y": 360
+      }
+    },
+    {
+      "id": "LEAF2",
+      "position": {
+        "x": 260,
+        "y": 360
+      }
+    },
+    {
+      "id": "LEAF3",
+      "position": {
+        "x": 380,
+        "y": 360
+      }
+    },
+    {
+      "id": "LEAF4",
+      "position": {
+        "x": 580,
+        "y": 360
+      }
+    },
+    {
+      "id": "S1",
+      "position": {
+        "x": 80,
+        "y": 480
+      }
+    },
+    {
+      "id": "S2",
+      "position": {
+        "x": 260,
+        "y": 480
+      }
+    },
+    {
+      "id": "S3",
+      "position": {
+        "x": 380,
+        "y": 480
+      }
+    },
+    {
+      "id": "S4",
+      "position": {
+        "x": 580,
+        "y": 480
+      }
+    }
+  ],
+  "edgeAnnotations": [],
+  "aliasEndpointAnnotations": [],
+  "viewerSettings": {}
+}

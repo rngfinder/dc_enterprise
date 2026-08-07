@@ -1,0 +1,76 @@
+! Startup-config last modified at Fri Aug  7 11:01:11 2026 by root
+! device: LEAF5 (cEOSLab, EOS-4.36.0F-47083774.4360F (engineering build))
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$zZVsYqavD5f1X8fJ$ELTcRbtLVqmcqVukPEfmgMv2ZIpGvGeaPlCIdwjr.uyVTuZbVp.Sg0vSy.tpWXP1H63ICoqD9FrQWZ5BVePqd0
+!
+management api http-commands
+   no shutdown
+!
+no service interface inactive port-id allocation disabled
+!
+service routing protocols model multi-agent
+!
+hostname LEAF5
+!
+spanning-tree mode mstp
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+management api gnmi
+   transport grpc default
+!
+management api netconf
+   transport ssh default
+!
+interface Ethernet1
+   description p2p_to_SPINE1
+   no switchport
+   ip address 10.1.5.1/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
+   pim ipv4 sparse-mode
+!
+interface Ethernet2
+   description p2p_to_SPINE2
+   no switchport
+   ip address 10.2.5.1/31
+   ip ospf network point-to-point
+   ip ospf area 0.0.0.0
+   pim ipv4 sparse-mode
+!
+interface Ethernet3
+   description p2p_to_FW1
+   no switchport
+   ip address 10.2.6.1/30
+!
+interface Loopback0
+   ip address 10.0.0.15/32
+   ip ospf area 0.0.0.0
+!
+interface Management0
+   ip address 172.20.20.8/24
+   ipv6 address 3fff:172:20:20::4/64
+!
+ip routing
+!
+ip route 0.0.0.0/0 172.20.20.1
+!
+ipv6 route ::/0 3fff:172:20:20::1
+!
+router multicast
+   ipv4
+      routing
+!
+router ospf 1
+   router-id 10.0.0.15
+   max-lsa 12000
+!
+router pim sparse-mode
+   ipv4
+      rp address 10.12.12.12
+!
+end

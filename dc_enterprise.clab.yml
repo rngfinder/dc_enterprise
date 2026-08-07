@@ -1,0 +1,71 @@
+# temlate topology vxlan
+name: dc_enterprise
+
+prefix: ""  # This will keep "LEAF1" as "LEAF1", instead of clab-dc_enterprise-LEAF1
+
+topology:
+  
+  kinds: 
+    arista_ceos:
+      image: ceos:4.36.0F  
+    linux:
+      image: ghcr.io/hellt/network-multitool:latest  
+  
+  nodes:
+    SPINE1:
+      kind: arista_ceos
+      mgmt-ipv4: 172.20.20.2
+    SPINE2:
+      kind: arista_ceos
+      mgmt-ipv4: 172.20.20.3
+    LEAF1:
+      kind: arista_ceos
+      mgmt-ipv4: 172.20.20.4
+    LEAF2:
+      kind: arista_ceos
+      mgmt-ipv4: 172.20.20.5
+    LEAF3:
+      kind: arista_ceos
+      mgmt-ipv4: 172.20.20.6
+    LEAF4:
+      kind: arista_ceos
+      mgmt-ipv4: 172.20.20.7
+      
+    S1:
+      kind: linux
+      mgmt-ipv4: 172.20.20.11
+      exec:
+       - ip addr add 192.168.0.1/24 dev eth1
+       - ip link set dev eth1 address aa:c1:ab:90:bb:11
+    S2:
+      kind: linux
+      mgmt-ipv4: 172.20.20.12
+      exec:
+       - ip addr add 192.168.0.2/24 dev eth1
+       - ip link set dev eth1 address aa:c1:ab:90:bb:12 
+    S3:
+      kind: linux
+      mgmt-ipv4: 172.20.20.13
+      exec:
+       - ip addr add 192.168.0.3/24 dev eth1
+       - ip link set dev eth1 address aa:c1:ab:90:bb:13
+    S4:
+      kind: linux
+      mgmt-ipv4: 172.20.20.14
+      exec:
+       - ip addr add 192.168.0.4/24 dev eth1
+       - ip link set dev eth1 address aa:c1:ab:90:bb:14
+      
+  links:
+    - endpoints: ["SPINE1:eth1", "LEAF1:eth1"]
+    - endpoints: ["SPINE1:eth2", "LEAF2:eth1"]
+    - endpoints: ["SPINE1:eth3", "LEAF3:eth1"]
+    - endpoints: ["SPINE1:eth4", "LEAF4:eth1"]
+    - endpoints: ["SPINE2:eth1", "LEAF1:eth2"]
+    - endpoints: ["SPINE2:eth2", "LEAF2:eth2"]
+    - endpoints: ["SPINE2:eth3", "LEAF3:eth2"]
+    - endpoints: ["SPINE2:eth4", "LEAF4:eth2"]
+    - endpoints: ["S1:eth1", "LEAF1:eth3"]
+    - endpoints: ["S2:eth1", "LEAF2:eth3"]
+    - endpoints: ["S3:eth1", "LEAF3:eth3"]
+    - endpoints: ["S4:eth1", "LEAF4:eth3"]
