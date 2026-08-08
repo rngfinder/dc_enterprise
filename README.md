@@ -15,7 +15,7 @@ The project demonstrates how to build a modern Spine-Leaf architecture using an 
 
 ### Architecture
 
-![Project Screenshot](topology.png)
+![Project Screenshot](topology_l2.png)
 
 ---
 
